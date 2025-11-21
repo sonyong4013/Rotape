@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function ParticipantLanding() {
   const router = useRouter();
-  const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth!);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   useEffect(() => {
@@ -92,7 +92,7 @@ export default function ParticipantLanding() {
               >
                 <p className="text-sm mb-2 text-gray-800">참가자 {i}</p>
                 <p className="text-sm text-gray-700">
-                  "정말 즐거운 시간이었어요! 좋은 만남이 있었습니다."
+                  &ldquo;정말 즐거운 시간이었어요! 좋은 만남이 있었습니다.&rdquo;
                 </p>
               </div>
             ))}
